@@ -34,11 +34,13 @@ gem 'haml-rails'
 
 
 #Test frameworks
-group :test do 
+group :test, :development do 
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'rspec'
+  gem 'shoulda'
 end
 
