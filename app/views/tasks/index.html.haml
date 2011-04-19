@@ -1,5 +1,10 @@
 %h1 Listing tasks
 
+- tasks_with_quadrant.each do |arr| 
+  = render 'tasks_in_quadrant', :tasks => arr.first, :quadrant => arr.last
+
+
+
 %table
   %tr
     %th Title

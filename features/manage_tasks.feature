@@ -24,3 +24,8 @@ Feature: Manage tasks
       |title 1|body 1|
       |title 2|body 2|
       |title 4|body 4|
+
+  Scenario: View tasks in four quadrants
+    Given I have tasks in different quadrants
+    When I visit the tasks page
+    Then I should be able to see the tasks under their respective quadrants 
