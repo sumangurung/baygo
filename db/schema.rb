@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410025346) do
+ActiveRecord::Schema.define(:version => 20110410035406) do
 
   create_table "tasks", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20110410025346) do
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
+    t.boolean  "important",  :default => false
+    t.boolean  "urgent",     :default => false
   end
 
 end
