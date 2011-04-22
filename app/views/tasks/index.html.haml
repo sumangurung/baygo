@@ -1,26 +1,18 @@
 %h1 Listing tasks
 
-- tasks_with_quadrant.each do |arr| 
-  = render 'tasks_in_quadrant', :tasks => arr.first, :quadrant => arr.last
-
-
-
 %table
   %tr
-    %th Title
-    %th Body
+    %th{:class => 'side_header'}
+    %th{:class => 'top_header'} Urgent
+    %th{:class => 'top_header'} Not Urgent
+  %tr
     %th
+      %p{:class => 'vertical_text'} Important
+    %td= render 'tasks_in_quadrant', :tasks => Task.items_in_quadrant_1, :quadrant => 1
+    %td= render 'tasks_in_quadrant', :tasks => Task.items_in_quadrant_2, :quadrant => 2
+  %tr 
     %th
-    %th
+      %p{:class => 'vertical_text'} Not Important
+    %td= render 'tasks_in_quadrant', :tasks => Task.items_in_quadrant_3, :quadrant => 3
+    %td= render 'tasks_in_quadrant', :tasks => Task.items_in_quadrant_4, :quadrant => 4
 
-  - @tasks.each do |task|
-    %tr
-      %td= task.title
-      %td= task.body
-      %td= link_to 'Show', task
-      %td= link_to 'Edit', edit_task_path(task)
-      %td= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Task', new_task_path

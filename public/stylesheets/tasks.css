@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+  height: 100%;
+}
+
+table th.top_header {
+  text-align: center;
+  width: 50%;
+  font-size: 22px;
+}
+
+table th.side_header {
+  text-align: center;
+  width: 20px;
+}
+
+table th p.vertical_text {
+  width: 1em;
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 90%;
+}
+table td {
+  height: 350px;
+}
+
+div.panel {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #999999;
+}

@@ -11,20 +11,6 @@ Feature: Manage tasks
     Then I should see "title 1"
     And I should see "body 1"
 
-  Scenario: Delete task
-    Given the following tasks:
-      |title|body|
-      |title 1|body 1|
-      |title 2|body 2|
-      |title 3|body 3|
-      |title 4|body 4|
-    When I delete the 3rd task
-    Then I should see the following tasks:
-      |Title|Body|
-      |title 1|body 1|
-      |title 2|body 2|
-      |title 4|body 4|
-
   Scenario: View tasks in four quadrants
     Given I have tasks in different quadrants
     When I visit the tasks page

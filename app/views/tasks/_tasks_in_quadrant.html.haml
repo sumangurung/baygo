@@ -1,5 +1,5 @@
-%div{:id => "quadrant_#{quadrant}"}
+%div{:id => "quadrant_#{quadrant}", :class => "panel"}
   %ul
-  - tasks.each do |task|
-    %li= task.title
+    - tasks.each do |task|
+      %li= task.title
 

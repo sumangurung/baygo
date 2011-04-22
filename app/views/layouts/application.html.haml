@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title Baygo 
+    = stylesheet_link_tag :all
+    = yield :stylesheet
+    = csrf_meta_tag
+  %body
+    %div{:id => 'content'} 
+      = yield
+    = javascript_include_tag(:defaults, 'tasks')
+    = yield :javascripts
+
